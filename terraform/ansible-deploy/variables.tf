@@ -3,7 +3,7 @@ variable "key_name" {
 }
 
 variable "pvt_key" {
-  default = "/home/mtadminnuvepro/.ssh/capstone301.pem"
+  default = "/root/.ssh/capstone301"
 }
 
 variable "sg-id" {
