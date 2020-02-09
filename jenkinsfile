@@ -73,7 +73,7 @@ node {
    
  }
 
-def project_terra="KalingaMusic/terraform/ansible-deploy"
+def project_terra="terraform/ansible-deploy"
 dir(project_terra) {
    stage('Prod Deployment on AWS'){
    sh label: 'terraform', script: '/bin/terraform  init'
