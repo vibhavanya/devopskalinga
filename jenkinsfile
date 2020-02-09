@@ -40,7 +40,7 @@ node {
         def server= Artifactory.server 'Artifactory'
                     def uploadSpec= """{
                         "files": [{
-                        "pattern": "/home/mtadminnuvepro/.jenkins/workspace/kalingamusic/kalingamusic/target/*.war",
+                        "pattern": "/root/.jenkins/workspace/kalingaMusic/target/*.war",
                         "target": "Kalingamusic"}]
                     }"""
         server.upload(uploadSpec)
@@ -73,7 +73,7 @@ node {
    
  }
 
-def project_terra="kalingamusic/terraform/ansible-deploy"
+def project_terra="KalingaMusic/terraform/ansible-deploy"
 dir(project_terra) {
    stage('Prod Deployment on AWS'){
    sh label: 'terraform', script: '/bin/terraform  init'
@@ -90,7 +90,7 @@ notify('Job Completed')
 
 def notify(status){
     emailext (
-	to: "chakradhar1998@outlook.com",
+	to: "pattnaikabhishek1996@gmail.com",
 	subject: "${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
 	 body: """<p>${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
 	<p>Check console output at <a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a></p>""",
