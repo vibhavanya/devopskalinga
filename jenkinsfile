@@ -7,7 +7,7 @@ node {
    git 'https://github.com/AbhishekPattnaik04/KalingaMusic.git'
   }
     
- def project_path="kalingamusic/"
+ def project_path=""
  
  dir(project_path) {
     
