@@ -59,12 +59,19 @@ node {
     ]
     }"""
     server.download(downloadSpec)
-   
+    
 }
+
+   stage('Input for deploy in test server'){
+   input('Do you want to proceed?')
+   }
 
    stage('Docker-Stage-Deployment') {
    sh label: '', script: 'docker-compose up -d --build'
   }
+   stage('Input for deploy in production server'){
+   input('Do you want to proceed for deployment into production server?')
+   }
  
   stage('Geting Ready For Ansible') {
   sh label: 'Docker', script: 'cp -rf target/*.war terraform/ansible-deploy/ansible/tomcat/templates/'
