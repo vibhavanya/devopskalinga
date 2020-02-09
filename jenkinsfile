@@ -4,7 +4,7 @@ node {
 
      
   stage('Git-Checkout') {
-   git 'https://github.com/chakri1998/ansiblemusicstore.git'
+   git 'https://github.com/AbhishekPattnaik04/KalingaMusic.git'
   }
     
  def project_path="kalingamusic/"
