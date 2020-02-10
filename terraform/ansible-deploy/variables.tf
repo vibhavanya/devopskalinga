@@ -1,11 +1,15 @@
 variable "key_name" {
-  default = "capstone301"
+  default = "oregon1"
 }
 
 variable "pvt_key" {
-  default = "/root/.ssh/capstone301"
+  default = "/root/.ssh/inkey.pem"
+}
+
+variable "us-east-zones" {
+  default = ["us-east-1a", "us-east-1b"]
 }
 
 variable "sg-id" {
-  default = "sg-0aa372d197dc34c80"
+  default = "sg-03ac9f8eb19fb3bd6"
 }
