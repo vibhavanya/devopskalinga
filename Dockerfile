@@ -1,5 +1,5 @@
-FROM tomcat:9.0
-MAINTAINER Abhishek Pattnaik
+FROM tomcat:8.0
+MAINTAINER Vibha 
 RUN echo 'Deploying War on Server'
 RUN rm -rf /usr/local/tomcat/webapps/*
 COPY target/kalingamusic-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
