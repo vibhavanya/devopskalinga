@@ -41,7 +41,7 @@ node {
                     def uploadSpec= """{
                         "files": [{
                         "pattern": "/root/.jenkins/workspace/kalingaMusic/target/*.war",
-                        "target": "Kalingamusic"}]
+                        "target": "vibha1"}]
                     }"""
         server.upload(uploadSpec)
         
